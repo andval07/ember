@@ -35,7 +35,8 @@ def main(argv: list[str] | None = None) -> int:
               file=sys.stderr)
         if not same:
             return 1
-    return code if code is not None else 1
+    # Process exit codes are 8 bits; the full value is printed above.
+    return code & 0xFF if code is not None else 1
 
 
 if __name__ == "__main__":

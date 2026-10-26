@@ -15,7 +15,8 @@ YY
 
 ## Language
 
-- `int` (32 bit), `char` (8 bit, signed), pointers, one-dimensional arrays
+- `int` (32 bit), `char` (8 bit, signed), pointers, arrays (also arrays of
+  arrays)
 - pointer arithmetic and pointer difference, array-to-pointer decay
 - string literals, `char s[] = "..."`, global initializers
 - globals and locals, functions with up to 8 arguments, recursion,
@@ -109,7 +110,7 @@ unsigned by default, so the reference is built with `-fsigned-char`.
 
 - `struct`, `union`, `enum`, `typedef`, `float`, `unsigned`, `short`,
   `long`
-- multi-dimensional arrays, function pointers, variadic functions
+- function pointers, variadic functions
 - the preprocessor: no `#include`, no `#define`
 - more than 8 function arguments
 - `switch`, `goto`, labels
