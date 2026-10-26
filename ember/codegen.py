@@ -72,6 +72,7 @@ class FunctionGen:
             offset += slot.size
             offset += -offset % slot.align
             slot.offset = -offset
+        offset += -offset % 4
         temps = {t for ins in self.fn.body for t in ins.uses()}
         temps |= {ins.dst for ins in self.fn.body if ins.dst is not None}
         temps |= set(self.fn.params)
